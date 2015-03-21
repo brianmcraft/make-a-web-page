@@ -1,8 +1,6 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
   <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
   <title>Work Sessions</title>
 </head>
@@ -439,7 +437,7 @@
         <div class="content">
           <div class="content-topic">
             <span class="bold">Strings</span>
-            <p>An index finds a portion of a string (e.g. the 2nd character)</p>
+            <p>An index finds a portion of a string (e.g. the 2nd character)...the first character is at position 0</p>
             <p class="code"><span class="italic">string[n]</span> returns the nth character of the string</p>
             <p>An index subsequence can find multiple characters within a string...a few examples:</p>
             <p class="code"><span class="italic">string[n1:n2]</span> starts at the n1th character and evaluates to just before the n2nd character</p>
@@ -602,6 +600,96 @@
             some code after the while loop<br></p>
           </div>
         </div>
+    </div>
+  </div>
+        <!-- Work Session 5 begins here -->
+  <div class="worksession">
+    <h3>Structured Data: Lists and For Loops</h3>
+  </div>
+    <div class="card">
+      <div class="card-title">
+        <h3>Reflection</h3>
+      </div>
+      <div class="card-content">
+        <div class="icon">
+        </div>
+        <div class="content">I can see how structured data like lists (and the methods/operations you can call upon them) open the door for more complex decision-making and problem solving. Loops, both while and for, represent the desire for efficiency in coding...less is more!
+        </div>
+      </div>
+  </div>
+  <div class="card">
+    <div class="card-title">
+      <h3>Notes</h3>
+    </div>
+      <div class="card-content">
+        <div class="icon">
+        </div>
+        <div class="content">
+          <div class="content-topic">
+            <span class="bold">Structured Data</span>
+            <p>Strings are sequences of characters; Lists are sequences of anything (characters, numbers, even other lists)</p>
+            <p>You can use an index on a list to return particular elements; you can also use multiple indexes if your list contains lists, for example:</p>
+            <p class="code">beatles[3][0] will return the 1st element of the 4th element of a list named "beatles"</p>
+          </div>
+        </div>
+    </div>
+  <div class="content-topic-divider">
+  </div>    
+    <div class="card-content">
+        <div class="icon">
+        </div>
+        <div class="content">
+          <div class="content-topic">
+            <span class="bold">Mutation and Aliasing</span>
+            <p><span class="italic">Mutation</span> - changing an element's values</p>
+            <p><span class="italic">Aliasing</span> - referencing the same object through multiple assignments</p>
+            <p>If the list [1,2,3] is assigned to p, and p is assigned to q, then changing the 2nd element of p (p[1] = 5), makes both p <span class="bold">and</span> q have the assignment of [1,5,3].</p>
+          </div>
+      </div>
+    </div>
+  <div class="content-topic-divider">
+  </div>    
+    <div class="card-content">
+        <div class="icon">
+        </div>
+        <div class="content">
+          <div class="content-topic">
+            <span class="bold">Other List Operations</span>
+            <p><span class="italic">Append</span> - method (like .find) that mutates a list to include a new element at the end (that new element could be a reference to another list)</p>
+            <p>Python has special syntax that operates like .append shown as +=, e.g. mylist += [3] is the same as mylist.append(3) but is not the same as mylist.append([3])</p>
+            <p class = "code">mylist = [1,2]<br>
+            mylist += [3] ---> [1,2,3]<br>
+            mylist.append(3) ---> [1,2,3]<br>
+            mylist.append([3]) ---> [1,2,[3]]<br>
+            mylist + [3] ---> [1,2,3]</p>
+            <p class="code">list.append(new_element)</p>
+            <p><span class="italic">Addition</span> - operation like concatenation ("+") that creates a new list from other existing lists</p>
+            <p class="code">list + list</p>
+            <p><span class="italic">Length</span> - procedure operation (len) that determines the number of outer elements within a list (can also be used to count characters in a string)</p>
+            <p class="code">len(list)</p>
+          </div>
+      </div>
+    </div>
+  <div class="content-topic-divider">
+  </div>    
+    <div class="card-content">
+        <div class="icon">
+        </div>
+        <div class="content">
+          <div class="content-topic">
+            <span class="bold">For Loops</span>
+            <p>For loops iterate through each element in a given list, jumping out of the loop when all elements have been evaluated; each element in the list is assigned to the name variable below for each loop iteration:</p>
+            <p class="code">for &lt;name&gt; in &lt;list&gt;:<br>
+            &nbsp;&nbsp;&lt;block&gt;</p>
+            <p><span class = "italic">Index</span> method invoked on a list provided a given value returns the first position of that value in the list (if the value is in the list; otherwise, error):</p>
+            <p class="code">list.index(value)</p>
+            <p><span class = "italic">In</span> operator returns true/false to determine if a value is in a list:</p>
+            <p class="code">&lt;value&gt; in &lt;list&gt; will return True or False</p>
+            <p><span class = "italic">Not In</span> operator returns true/false to determine if a value is <span class = "bold">not</span> in a list:</p>
+            <p class="code">&lt;value&gt; not in &lt;list&gt; will return True or False</p>
+            <p>Hold onto <a href="https://www.udacity.com/course/viewer#!/c-ud552-nd/l-3523729585/m-3772628708">this page</a></p>
+          </div>
+      </div>
     </div>
   </div>
   <div class="worksession">
